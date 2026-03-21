@@ -327,7 +327,7 @@ class MainWindow(Adw.ApplicationWindow):
 
     def _on_slot_selected(self, slot_index: int) -> None:
         logger.debug("Slot %d selected", slot_index)
-        self._for_each_table(lambda t: t.set_filter_slot(slot_index))
+        self._data_table.set_filter_slot(slot_index)
         self._update_charts()
 
     # --- Display style ---
