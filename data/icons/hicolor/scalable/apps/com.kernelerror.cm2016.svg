@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="batteryGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4e9a06"/>
+      <stop offset="100%" stop-color="#2e5a04"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d3846"/>
+      <stop offset="100%" stop-color="#241f31"/>
+    </linearGradient>
+    <linearGradient id="chargeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f9f06b"/>
+      <stop offset="100%" stop-color="#e5a50a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="4" y="4" width="120" height="120" rx="20" ry="20" fill="url(#bgGrad)" stroke="#1a1a2e" stroke-width="2"/>
+
+  <!-- Battery body -->
+  <rect x="22" y="38" width="60" height="52" rx="6" ry="6" fill="url(#batteryGrad)" stroke="#1a5a02" stroke-width="2.5"/>
+
+  <!-- Battery terminal (positive cap) -->
+  <rect x="82" y="52" width="8" height="24" rx="3" ry="3" fill="#4e9a06" stroke="#1a5a02" stroke-width="2"/>
+
+  <!-- Charge level bars inside battery -->
+  <rect x="28" y="48" width="8" height="32" rx="2" ry="2" fill="#73d216" opacity="0.9"/>
+  <rect x="39" y="48" width="8" height="32" rx="2" ry="2" fill="#73d216" opacity="0.9"/>
+  <rect x="50" y="48" width="8" height="32" rx="2" ry="2" fill="#73d216" opacity="0.7"/>
+  <rect x="61" y="48" width="8" height="32" rx="2" ry="2" fill="#73d216" opacity="0.4"/>
+
+  <!-- Lightning bolt (charging indicator) -->
+  <polygon points="102,28 94,58 103,58 93,88 106,52 97,52" fill="url(#chargeGrad)" stroke="#c88800" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Slot indicators at bottom -->
+  <rect x="20" y="100" width="12" height="8" rx="2" ry="2" fill="#73d216"/>
+  <rect x="36" y="100" width="12" height="8" rx="2" ry="2" fill="#73d216"/>
+  <rect x="52" y="100" width="12" height="8" rx="2" ry="2" fill="#4e9a06" opacity="0.5"/>
+  <rect x="68" y="100" width="12" height="8" rx="2" ry="2" fill="#555"/>
+  <rect x="84" y="100" width="12" height="8" rx="2" ry="2" fill="#555"/>
+  <rect x="100" y="100" width="12" height="8" rx="2" ry="2" fill="#555"/>
+
+  <!-- "6" label for 6 slots -->
+  <text x="110" y="42" font-family="sans-serif" font-weight="bold" font-size="18" fill="#f9f06b" text-anchor="middle">6</text>
+</svg>

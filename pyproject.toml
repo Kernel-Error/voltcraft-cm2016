@@ -1,0 +1,61 @@
+[project]
+name = "voltcraft-cm2016"
+version = "0.1.0"
+description = "GTK4 GUI for the Voltcraft Charge Manager CM 2016 battery charger"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Sebastian van de Meer aka Kernel-Error", email = "kernel-error@kernel-error.com" },
+]
+dependencies = [
+    "PyGObject>=3.42",
+    "pyserial>=3.5",
+    "openpyxl>=3.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/Kernel-Error/voltcraft-cm2016"
+
+[project.scripts]
+cm2016 = "cm2016.app:main"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "TCH",  # flake8-type-checking
+    "RUF",  # ruff-specific rules
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+    "E402",  # module level import not at top (required by gi.require_version)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["cm2016"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = ["gi.*", "serial.*", "cairo.*", "openpyxl.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

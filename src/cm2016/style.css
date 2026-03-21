@@ -1,0 +1,29 @@
+/* CM2016 GTK4 Application Styles */
+
+/* Slot panel base */
+.slot-panel {
+    padding: 4px;
+    border-radius: 6px;
+    margin: 2px 4px;
+}
+
+/* Idle state: gray background */
+.slot-panel-idle {
+    background-color: alpha(@card_bg_color, 0.5);
+}
+
+/* Recording state: green background */
+.slot-panel-recording {
+    background-color: alpha(#4e9a06, 0.25);
+}
+
+/* Selected slot: highlight border */
+.slot-panel-selected {
+    border: 2px solid @accent_color;
+}
+
+/* Slot title */
+.slot-title {
+    font-weight: bold;
+    font-size: 0.9em;
+}

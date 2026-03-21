@@ -1,0 +1,291 @@
+# Dutch translation for CM2016.
+# Copyright (C) 2026 Sebastian van de Meer aka Kernel-Error
+# This file is distributed under the same license as the cm2016 package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cm2016 0.1.0\n"
+"Report-Msgid-Bugs-To: kernel-error@kernel-error.com\n"
+"POT-Creation-Date: 2026-03-21 00:00+0000\n"
+"PO-Revision-Date: 2026-03-21 16:30+0100\n"
+"Last-Translator: Sebastian van de Meer <kernel-error@kernel-error.com>\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# --- App title ---
+msgid "Charge Manager CM 2016"
+msgstr "Charge Manager CM 2016"
+
+# --- Header bar ---
+msgid "File"
+msgstr "Bestand"
+
+msgid "Port"
+msgstr "Poort"
+
+msgid "Start Logging"
+msgstr "Opname starten"
+
+msgid "Stop Logging"
+msgstr "Opname stoppen"
+
+msgid "Export"
+msgstr "Exporteren"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Spreadsheet (.xlsx)"
+msgstr "Werkblad (.xlsx)"
+
+msgid "Print"
+msgstr "Afdrukken"
+
+msgid "Clear Data"
+msgstr "Gegevens wissen"
+
+msgid "About"
+msgstr "Over"
+
+msgid "Table"
+msgstr "Tabel"
+
+msgid "Charts"
+msgstr "Grafieken"
+
+# --- Port dialog ---
+msgid "Select COM-Port"
+msgstr "COM-poort selecteren"
+
+msgid "COM-Port"
+msgstr "COM-poort"
+
+msgid "Refresh"
+msgstr "Vernieuwen"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgid "No ports found"
+msgstr "Geen poorten gevonden"
+
+# --- Slot panel labels ---
+msgid "Program:"
+msgstr "Programma:"
+
+msgid "Actual:"
+msgstr "Actueel:"
+
+msgid "Chemistry:"
+msgstr "Chemie:"
+
+msgid "Time:"
+msgstr "Tijd:"
+
+msgid "C-CAP:"
+msgstr "L-CAP:"
+
+msgid "D-CAP:"
+msgstr "O-CAP:"
+
+msgid "Voltage:"
+msgstr "Spanning:"
+
+msgid "Current:"
+msgstr "Stroom:"
+
+# --- Data table ---
+msgid "All Slots"
+msgstr "Alle sleuven"
+
+msgid "Autoscroll"
+msgstr "Autoscroll"
+
+msgid "Slot"
+msgstr "Sleuf"
+
+msgid "Time"
+msgstr "Tijd"
+
+msgid "Program"
+msgstr "Programma"
+
+msgid "Actual"
+msgstr "Actueel"
+
+msgid "Voltage (V)"
+msgstr "Spanning (V)"
+
+msgid "Current (A)"
+msgstr "Stroom (A)"
+
+msgid "CCAP (mAh)"
+msgstr "L-CAP (mAh)"
+
+msgid "DCAP (mAh)"
+msgstr "O-CAP (mAh)"
+
+msgid "Chemistry"
+msgstr "Chemie"
+
+# --- Clipboard ---
+msgid "Copy Selected Rows"
+msgstr "Geselecteerde rijen kopieren"
+
+msgid "Copy All Rows"
+msgstr "Alle rijen kopieren"
+
+# --- Charts ---
+msgid "Voltage"
+msgstr "Spanning"
+
+msgid "Voltage [V]"
+msgstr "Spanning [V]"
+
+msgid "Current"
+msgstr "Stroom"
+
+msgid "Current [A]"
+msgstr "Stroom [A]"
+
+msgid "No data"
+msgstr "Geen gegevens"
+
+msgid "Style:"
+msgstr "Stijl:"
+
+msgid "Lines"
+msgstr "Lijnen"
+
+msgid "Bar"
+msgstr "Staaf"
+
+msgid "Show more time"
+msgstr "Meer tijd tonen"
+
+msgid "Show less time"
+msgstr "Minder tijd tonen"
+
+msgid "Time window: All"
+msgstr "Tijdvenster: Alles"
+
+msgid "Time window: {h}h"
+msgstr "Tijdvenster: {h}u"
+
+msgid "Time window: {m} min"
+msgstr "Tijdvenster: {m} min"
+
+msgid "Zoom In"
+msgstr "Inzoomen"
+
+msgid "Reset Zoom"
+msgstr "Zoom herstellen"
+
+# --- Tooltip ---
+msgid "Actual Mode:"
+msgstr "Actuele modus:"
+
+# --- Status messages ---
+msgid "Select a port and click Start Logging"
+msgstr "Selecteer een poort en klik op Opname starten"
+
+msgid "Waiting For Data"
+msgstr "Wachten op gegevens"
+
+msgid "Recording \xe2\x80\x94 {count} data points"
+msgstr "Opname \xe2\x80\x94 {count} gegevenspunten"
+
+msgid "Logging stopped"
+msgstr "Opname gestopt"
+
+msgid "All data cleared"
+msgstr "Alle gegevens gewist"
+
+msgid "{count} data points loaded"
+msgstr "{count} gegevenspunten geladen"
+
+msgid "Recording stopped: CM2016 switched off or disconnected"
+msgstr "Opname gestopt: CM2016 uitgeschakeld of losgekoppeld"
+
+msgid "Failed to connect to port"
+msgstr "Verbinding met poort mislukt"
+
+msgid "CM2016 is recording data"
+msgstr "CM2016 neemt gegevens op"
+
+# --- Save/Load ---
+msgid "Save Logged Data"
+msgstr "Opnamegegevens opslaan"
+
+msgid "Load Logged Data"
+msgstr "Opnamegegevens laden"
+
+msgid "CM2016 files"
+msgstr "CM2016-bestanden"
+
+msgid "No data to save"
+msgstr "Geen gegevens om op te slaan"
+
+msgid "Saved {count} records"
+msgstr "{count} records opgeslagen"
+
+msgid "Loaded {count} records from {name}"
+msgstr "{count} records geladen uit {name}"
+
+msgid "Failed to load file"
+msgstr "Bestand kon niet worden geladen"
+
+# --- Export ---
+msgid "CSV files"
+msgstr "CSV-bestanden"
+
+msgid "Spreadsheet files"
+msgstr "Werkbladbestanden"
+
+msgid "No data to export"
+msgstr "Geen gegevens om te exporteren"
+
+msgid "Exported {count} rows to {name}"
+msgstr "{count} rijen geexporteerd naar {name}"
+
+# --- Print ---
+msgid "No data to print"
+msgstr "Geen gegevens om af te drukken"
+
+# --- Clear data ---
+msgid "Delete all recorded data for all slots?"
+msgstr "Alle opgenomen gegevens voor alle sleuven verwijderen?"
+
+msgid "Clear"
+msgstr "Wissen"
+
+# --- Recovery ---
+msgid "Continue last recording?"
+msgstr "Laatste opname voortzetten?"
+
+msgid "Recovery data from a previous session was found."
+msgstr "Herstelgegevens van een vorige sessie zijn gevonden."
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nee"
+
+msgid "Restored {count} records"
+msgstr "{count} records hersteld"
+
+# --- About dialog ---
+msgid ""
+"Open-source Linux GUI for the Voltcraft Charge Manager CM 2016 battery "
+"charger. Replaces the Windows-only CM2016 Logger software."
+msgstr ""
+"Open-source Linux GUI voor de Voltcraft Charge Manager CM 2016 "
+"batterijlader. Vervangt de alleen voor Windows beschikbare CM2016 Logger software."

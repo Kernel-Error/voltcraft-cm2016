@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Charge Manager CM 2016
+Name[de]=Charge Manager CM 2016
+Comment=Battery charger monitoring for Voltcraft CM 2016
+Comment[de]=Akku-Ladegeraet Ueberwachung fuer Voltcraft CM 2016
+Exec=cm2016
+Icon=com.kernelerror.cm2016
+Terminal=false
+Type=Application
+Categories=Utility;Electronics;
+Keywords=battery;charger;voltcraft;cm2016;NiMH;
+StartupNotify=true

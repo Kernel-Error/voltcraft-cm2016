@@ -1,0 +1,292 @@
+# French translation for CM2016.
+# Copyright (C) 2026 Sebastian van de Meer aka Kernel-Error
+# This file is distributed under the same license as the cm2016 package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cm2016 0.1.0\n"
+"Report-Msgid-Bugs-To: kernel-error@kernel-error.com\n"
+"POT-Creation-Date: 2026-03-21 00:00+0000\n"
+"PO-Revision-Date: 2026-03-21 16:30+0100\n"
+"Last-Translator: Sebastian van de Meer <kernel-error@kernel-error.com>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# --- App title ---
+msgid "Charge Manager CM 2016"
+msgstr "Charge Manager CM 2016"
+
+# --- Header bar ---
+msgid "File"
+msgstr "Fichier"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Start Logging"
+msgstr "Demarrer l'enregistrement"
+
+msgid "Stop Logging"
+msgstr "Arreter l'enregistrement"
+
+msgid "Export"
+msgstr "Exporter"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Spreadsheet (.xlsx)"
+msgstr "Tableur (.xlsx)"
+
+msgid "Print"
+msgstr "Imprimer"
+
+msgid "Clear Data"
+msgstr "Effacer les donnees"
+
+msgid "About"
+msgstr "A propos"
+
+msgid "Table"
+msgstr "Tableau"
+
+msgid "Charts"
+msgstr "Graphiques"
+
+# --- Port dialog ---
+msgid "Select COM-Port"
+msgstr "Selectionner le port COM"
+
+msgid "COM-Port"
+msgstr "Port COM"
+
+msgid "Refresh"
+msgstr "Actualiser"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "No ports found"
+msgstr "Aucun port trouve"
+
+# --- Slot panel labels ---
+msgid "Program:"
+msgstr "Programme :"
+
+msgid "Actual:"
+msgstr "Etat actuel :"
+
+msgid "Chemistry:"
+msgstr "Chimie :"
+
+msgid "Time:"
+msgstr "Temps :"
+
+msgid "C-CAP:"
+msgstr "CAP-C :"
+
+msgid "D-CAP:"
+msgstr "CAP-D :"
+
+msgid "Voltage:"
+msgstr "Tension :"
+
+msgid "Current:"
+msgstr "Courant :"
+
+# --- Data table ---
+msgid "All Slots"
+msgstr "Tous les emplacements"
+
+msgid "Autoscroll"
+msgstr "Defilement automatique"
+
+msgid "Slot"
+msgstr "Emplacement"
+
+msgid "Time"
+msgstr "Temps"
+
+msgid "Program"
+msgstr "Programme"
+
+msgid "Actual"
+msgstr "Etat actuel"
+
+msgid "Voltage (V)"
+msgstr "Tension (V)"
+
+msgid "Current (A)"
+msgstr "Courant (A)"
+
+msgid "CCAP (mAh)"
+msgstr "CAP-C (mAh)"
+
+msgid "DCAP (mAh)"
+msgstr "CAP-D (mAh)"
+
+msgid "Chemistry"
+msgstr "Chimie"
+
+# --- Clipboard ---
+msgid "Copy Selected Rows"
+msgstr "Copier les lignes selectionnees"
+
+msgid "Copy All Rows"
+msgstr "Copier toutes les lignes"
+
+# --- Charts ---
+msgid "Voltage"
+msgstr "Tension"
+
+msgid "Voltage [V]"
+msgstr "Tension [V]"
+
+msgid "Current"
+msgstr "Courant"
+
+msgid "Current [A]"
+msgstr "Courant [A]"
+
+msgid "No data"
+msgstr "Aucune donnee"
+
+msgid "Style:"
+msgstr "Style :"
+
+msgid "Lines"
+msgstr "Lignes"
+
+msgid "Bar"
+msgstr "Barres"
+
+msgid "Show more time"
+msgstr "Afficher plus de temps"
+
+msgid "Show less time"
+msgstr "Afficher moins de temps"
+
+msgid "Time window: All"
+msgstr "Fenetre temporelle : Tout"
+
+msgid "Time window: {h}h"
+msgstr "Fenetre temporelle : {h}h"
+
+msgid "Time window: {m} min"
+msgstr "Fenetre temporelle : {m} min"
+
+msgid "Zoom In"
+msgstr "Zoom avant"
+
+msgid "Reset Zoom"
+msgstr "Reinitialiser le zoom"
+
+# --- Tooltip ---
+msgid "Actual Mode:"
+msgstr "Mode actuel :"
+
+# --- Status messages ---
+msgid "Select a port and click Start Logging"
+msgstr "Selectionnez un port et cliquez sur Demarrer l'enregistrement"
+
+msgid "Waiting For Data"
+msgstr "En attente de donnees"
+
+msgid "Recording \xe2\x80\x94 {count} data points"
+msgstr "Enregistrement \xe2\x80\x94 {count} points de donnees"
+
+msgid "Logging stopped"
+msgstr "Enregistrement arrete"
+
+msgid "All data cleared"
+msgstr "Toutes les donnees effacees"
+
+msgid "{count} data points loaded"
+msgstr "{count} points de donnees charges"
+
+msgid "Recording stopped: CM2016 switched off or disconnected"
+msgstr "Enregistrement arrete : CM2016 eteint ou deconnecte"
+
+msgid "Failed to connect to port"
+msgstr "Echec de connexion au port"
+
+msgid "CM2016 is recording data"
+msgstr "CM2016 enregistre les donnees"
+
+# --- Save/Load ---
+msgid "Save Logged Data"
+msgstr "Enregistrer les donnees"
+
+msgid "Load Logged Data"
+msgstr "Charger les donnees"
+
+msgid "CM2016 files"
+msgstr "Fichiers CM2016"
+
+msgid "No data to save"
+msgstr "Aucune donnee a enregistrer"
+
+msgid "Saved {count} records"
+msgstr "{count} enregistrements sauvegardes"
+
+msgid "Loaded {count} records from {name}"
+msgstr "{count} enregistrements charges depuis {name}"
+
+msgid "Failed to load file"
+msgstr "Echec du chargement du fichier"
+
+# --- Export ---
+msgid "CSV files"
+msgstr "Fichiers CSV"
+
+msgid "Spreadsheet files"
+msgstr "Fichiers tableur"
+
+msgid "No data to export"
+msgstr "Aucune donnee a exporter"
+
+msgid "Exported {count} rows to {name}"
+msgstr "{count} lignes exportees vers {name}"
+
+# --- Print ---
+msgid "No data to print"
+msgstr "Aucune donnee a imprimer"
+
+# --- Clear data ---
+msgid "Delete all recorded data for all slots?"
+msgstr "Supprimer toutes les donnees enregistrees pour tous les emplacements ?"
+
+msgid "Clear"
+msgstr "Effacer"
+
+# --- Recovery ---
+msgid "Continue last recording?"
+msgstr "Reprendre le dernier enregistrement ?"
+
+msgid "Recovery data from a previous session was found."
+msgstr "Des donnees de recuperation d'une session precedente ont ete trouvees."
+
+msgid "Yes"
+msgstr "Oui"
+
+msgid "No"
+msgstr "Non"
+
+msgid "Restored {count} records"
+msgstr "{count} enregistrements restaures"
+
+# --- About dialog ---
+msgid ""
+"Open-source Linux GUI for the Voltcraft Charge Manager CM 2016 battery "
+"charger. Replaces the Windows-only CM2016 Logger software."
+msgstr ""
+"Interface graphique Linux open-source pour le chargeur de batteries "
+"Voltcraft Charge Manager CM 2016. Remplace le logiciel CM2016 Logger "
+"disponible uniquement sous Windows."

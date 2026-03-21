@@ -1,0 +1,14 @@
+src/cm2016/app.py
+src/cm2016/protocol.py
+src/cm2016/i18n.py
+src/cm2016/widgets/slot_panel.py
+src/cm2016/widgets/slot_sidebar.py
+src/cm2016/widgets/data_table.py
+src/cm2016/widgets/chart_widget.py
+src/cm2016/widgets/chart_toolbar.py
+src/cm2016/widgets/port_dialog.py
+src/cm2016/export/csv_export.py
+src/cm2016/export/excel_export.py
+src/cm2016/export/printer.py
+src/cm2016/persistence/file_io.py
+src/cm2016/persistence/temp_buffer.py
