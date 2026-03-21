@@ -157,6 +157,8 @@ auto-detected.
 
 ## 5. Main Window Overview
 
+![Main Window - Data Table](images/screenshot-table.png)
+
 The main window is divided into the following areas:
 
 ```
@@ -219,6 +221,8 @@ Displays the current application state:
 ---
 
 ## 6. Connecting to the Device
+
+![Port Selection Dialog](images/screenshot-port-dialog.png)
 
 ### Automatic Detection
 
@@ -382,6 +386,8 @@ Ctrl+click).
 
 ## 10. Charts
 
+![Line Charts](images/screenshot-charts.png)
+
 The charts view shows two graphs stacked vertically. Switch to the chart view
 using the **Display** dropdown (select "Charts").
 
@@ -403,6 +409,8 @@ Plots **Current [A]** on the Y-axis against **Time** on the X-axis.
 | Yellow  | Final voltage annotation (shown when a program completes)  |
 
 ### Chart Styles
+
+![Bar Chart Style](images/screenshot-bar-chart.png)
 
 Above the charts, the **Style** toolbar provides two rendering modes:
 

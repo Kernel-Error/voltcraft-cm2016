@@ -30,7 +30,21 @@ GTK 4 / libadwaita desktop application.
 
 ## Screenshots
 
-*Coming soon -- contributions welcome!*
+**Data table with live recording:**
+
+![Data Table](docs/images/screenshot-table.png)
+
+**Voltage and current charts (line style):**
+
+![Line Charts](docs/images/screenshot-charts.png)
+
+**Bar chart style:**
+
+![Bar Charts](docs/images/screenshot-bar-chart.png)
+
+**Port selection with auto-detect:**
+
+![Port Dialog](docs/images/screenshot-port-dialog.png)
 
 ## Requirements
 
