@@ -17,9 +17,20 @@ GTK 4 / libadwaita desktop application.
 - **Sleep inhibit** prevents system suspend during recording
 - **7 languages**: English, German, French, Dutch, Italian, Spanish, Polish
 
+## The Device
+
+<p align="center">
+  <img src="docs/images/cm2016-front.jpg" alt="CM 2016 front view with display" width="300">
+  <img src="docs/images/cm2016-angle.jpg" alt="CM 2016 angle view" width="300">
+</p>
+
+<p align="center">
+  <img src="docs/images/cm2016-label.jpg" alt="CM 2016 type label" width="300">
+</p>
+
 ## Screenshots
 
-*Coming soon*
+*Coming soon -- contributions welcome!*
 
 ## Requirements
 
@@ -51,14 +62,6 @@ cm2016
 The application auto-detects the device. Click **Start Logging** to begin recording.
 
 See [docs/manual.md](docs/manual.md) for the full user manual.
-
-## Device
-
-The Voltcraft CM 2016 is a charger/manager for AA/AAA NiMH rechargeable batteries
-with 6 independent charging slots. It connects via USB-B using a Silicon Labs CP210x
-USB-to-UART bridge chip and transmits measurement data every 2 seconds.
-
-Supported charging programs: Charge, Discharge, Check, Cycle, Alive.
 
 ## Development
 
