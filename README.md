@@ -61,18 +61,18 @@ GTK 4 / libadwaita desktop application.
 
 Download from [GitHub Releases](https://github.com/Kernel-Error/voltcraft-cm2016/releases):
 
-- **Debian/Ubuntu/Mint:** `voltcraft-cm2016_0.1.0_all.deb`
-- **Fedora/openSUSE/RHEL:** `voltcraft-cm2016-0.1.0-1.noarch.rpm`
+- **Debian/Ubuntu/Mint:** `voltcraft-cm2016_0.1.2_all.deb`
+- **Fedora/openSUSE/RHEL:** `voltcraft-cm2016-0.1.2-1.noarch.rpm`
 
 ```bash
 # Debian/Ubuntu/Mint
-sudo dpkg -i voltcraft-cm2016_0.1.0_all.deb
+sudo dpkg -i voltcraft-cm2016_0.1.2_all.deb
 
 # Fedora/RHEL
-sudo dnf install voltcraft-cm2016-0.1.0-1.noarch.rpm
+sudo dnf install voltcraft-cm2016-0.1.2-1.noarch.rpm
 
 # openSUSE
-sudo zypper install voltcraft-cm2016-0.1.0-1.noarch.rpm
+sudo zypper install voltcraft-cm2016-0.1.2-1.noarch.rpm
 ```
 
 ### From source
@@ -104,7 +104,7 @@ source .venv/bin/activate
 ruff check src/ tests/          # Lint
 ruff format src/ tests/         # Format
 mypy src/                       # Type check
-pytest                          # Run tests (135 tests)
+pytest                          # Run tests (202 tests)
 pytest --cov=cm2016             # Tests with coverage
 ```
 

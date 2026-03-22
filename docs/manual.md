@@ -1,6 +1,6 @@
 # Charge Manager CM 2016 -- User Manual
 
-Version 0.1.0
+Version 0.1.2
 
 ---
 
@@ -106,13 +106,13 @@ Download from [GitHub Releases](https://github.com/Kernel-Error/voltcraft-cm2016
 
 ```bash
 # Debian / Ubuntu / Mint
-sudo dpkg -i voltcraft-cm2016_0.1.0_all.deb
+sudo dpkg -i voltcraft-cm2016_0.1.2_all.deb
 
 # Fedora / RHEL
-sudo dnf install voltcraft-cm2016-0.1.0-1.noarch.rpm
+sudo dnf install voltcraft-cm2016-0.1.2-1.noarch.rpm
 
 # openSUSE
-sudo zypper install voltcraft-cm2016-0.1.0-1.noarch.rpm
+sudo zypper install voltcraft-cm2016-0.1.2-1.noarch.rpm
 ```
 
 After installation, launch with `cm2016` from the terminal or from the
