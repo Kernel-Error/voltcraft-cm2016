@@ -1,6 +1,6 @@
 [project]
 name = "voltcraft-cm2016"
-version = "0.1.1"
+version = "0.1.2"
 description = "GTK4 GUI for the Voltcraft Charge Manager CM 2016 battery charger"
 readme = "README.md"
 license = "MIT"

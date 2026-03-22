@@ -80,6 +80,18 @@
   </keywords>
 
   <releases>
+    <release version="0.1.2" date="2026-03-22">
+      <description>
+        <p>Bug fix release addressing 4 medium-priority issues and adding test coverage:</p>
+        <ul>
+          <li>Fix serial port not closing on connection loss</li>
+          <li>Fix crash on systems with misconfigured locale</li>
+          <li>Fix trickle vs charging status misclassification</li>
+          <li>Increase disconnect timeout to prevent false disconnects</li>
+          <li>Add tests for printer, data table, and chart widget</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.1" date="2026-03-22">
       <description>
         <p>Bug fix release addressing 4 high-priority issues:</p>
