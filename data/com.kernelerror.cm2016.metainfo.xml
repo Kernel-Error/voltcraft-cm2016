@@ -2,8 +2,8 @@
 <component type="desktop-application">
   <id>com.kernelerror.cm2016</id>
 
-  <name>Charge Manager CM 2016</name>
-  <summary>Battery charger monitoring for Voltcraft CM 2016</summary>
+  <name>CM 2016 Manager</name>
+  <summary>Voltcraft CM 2016 battery monitor</summary>
 
   <metadata_license>MIT</metadata_license>
   <project_license>MIT</project_license>
@@ -14,9 +14,9 @@
 
   <description>
     <p>
-      Charge Manager CM 2016 is a free, open-source Linux desktop application for
-      monitoring and logging data from the Voltcraft Charge Manager CM 2016
-      battery charger. It replaces the Windows-only CM2016 Logger V2.10 software.
+      Open-source Linux desktop application for monitoring and logging data
+      from the Voltcraft Charge Manager CM 2016 battery charger. Replaces the
+      Windows-only CM2016 Logger V2.10 software with a native GTK 4 interface.
     </p>
     <p>Features include:</p>
     <ul>
@@ -32,12 +32,35 @@
 
   <url type="homepage">https://github.com/Kernel-Error/voltcraft-cm2016</url>
   <url type="bugtracker">https://github.com/Kernel-Error/voltcraft-cm2016/issues</url>
+  <url type="vcs-browser">https://github.com/Kernel-Error/voltcraft-cm2016</url>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#73d216</color>
+    <color type="primary" scheme_preference="dark">#2e5a04</color>
+  </branding>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Data table with live recording from all 6 slots</caption>
+      <image>https://raw.githubusercontent.com/Kernel-Error/voltcraft-cm2016/main/data/screenshots/screenshot-table.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Voltage and current charts with charge/discharge color coding</caption>
+      <image>https://raw.githubusercontent.com/Kernel-Error/voltcraft-cm2016/main/data/screenshots/screenshot-charts.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Bar chart style</caption>
+      <image>https://raw.githubusercontent.com/Kernel-Error/voltcraft-cm2016/main/data/screenshots/screenshot-bar-chart.png</image>
+    </screenshot>
+  </screenshots>
 
   <launchable type="desktop-id">com.kernelerror.cm2016.desktop</launchable>
 
   <provides>
     <binary>cm2016</binary>
   </provides>
+
+  <translation type="gettext">cm2016</translation>
 
   <requires>
     <display_length compare="ge">800</display_length>
@@ -47,11 +70,6 @@
     <control>keyboard</control>
     <control>pointing</control>
   </recommends>
-
-  <categories>
-    <category>Utility</category>
-    <category>Electronics</category>
-  </categories>
 
   <keywords>
     <keyword>battery</keyword>
