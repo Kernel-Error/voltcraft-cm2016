@@ -566,15 +566,15 @@ class MainWindow(Adw.ApplicationWindow):
         filters.append(xlsx_filter)
         dialog.set_filters(filters)
 
-        dialog.save(self, None, self._on_excel_save_done, records, slot_name)
+        dialog.save(self, None, self._on_excel_save_done, (records, slot_name))
 
     def _on_excel_save_done(
         self,
         dialog: Gtk.FileDialog,
         result: Gio.AsyncResult,
-        records: list[SlotRecord],
-        slot_name: str,
+        user_data: tuple[list[SlotRecord], str],
     ) -> None:
+        records, slot_name = user_data
         try:
             gfile = dialog.save_finish(result)
         except GLib.Error:

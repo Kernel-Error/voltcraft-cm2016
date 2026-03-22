@@ -7,6 +7,7 @@ when a battery is removed (slot transitions from active to empty).
 from __future__ import annotations
 
 import logging
+import threading
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import TYPE_CHECKING
@@ -68,6 +69,7 @@ class Session:
     """
 
     def __init__(self) -> None:
+        self._lock = threading.RLock()
         self._data: dict[int, list[SlotRecord]] = {i: [] for i in range(SLOT_COUNT)}
         self._previous_status: dict[int, SlotStatus] = {}
 
@@ -84,16 +86,19 @@ class Session:
         Returns:
             List of records (may be empty). Do not modify directly.
         """
-        return self._data[slot_index]
+        with self._lock:
+            return list(self._data[slot_index])
 
     def get_all_data(self) -> dict[int, list[SlotRecord]]:
         """Get all recorded data for all slots."""
-        return self._data
+        with self._lock:
+            return {k: list(v) for k, v in self._data.items()}
 
     @property
     def total_records(self) -> int:
         """Total number of records across all slots."""
-        return sum(len(records) for records in self._data.values())
+        with self._lock:
+            return sum(len(records) for records in self._data.values())
 
     def append(self, slot_index: int, record: SlotRecord) -> None:
         """Append a measurement record to a slot.
@@ -102,23 +107,26 @@ class Session:
             slot_index: 0-5
             record: The measurement data point.
         """
-        self._data[slot_index].append(record)
+        with self._lock:
+            self._data[slot_index].append(record)
         if self.on_record_added is not None:
             self.on_record_added(slot_index, record)
 
     def clear_slot(self, slot_index: int) -> None:
         """Clear all recorded data for a single slot."""
-        self._data[slot_index] = []
-        self._previous_status.pop(slot_index, None)
+        with self._lock:
+            self._data[slot_index] = []
+            self._previous_status.pop(slot_index, None)
         logger.debug("Cleared data for slot %d", slot_index)
         if self.on_slot_cleared is not None:
             self.on_slot_cleared(slot_index)
 
     def clear(self) -> None:
         """Clear all recorded data for all slots."""
-        for i in range(SLOT_COUNT):
-            self._data[i] = []
-        self._previous_status.clear()
+        with self._lock:
+            for i in range(SLOT_COUNT):
+                self._data[i] = []
+            self._previous_status.clear()
         logger.debug("Cleared all session data")
         if self.on_all_cleared is not None:
             self.on_all_cleared()

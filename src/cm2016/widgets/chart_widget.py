@@ -256,9 +256,19 @@ class ChartWidget(Gtk.DrawingArea):
         # Apply viewport override (zoom)
         if self._view_t_min is not None:
             t_min = self._view_t_min
-            t_max = self._view_t_max or t_max
-            v_min = self._view_v_min or v_min
-            v_max = self._view_v_max or v_max
+            t_max = self._view_t_max if self._view_t_max is not None else t_max
+            v_min = self._view_v_min if self._view_v_min is not None else v_min
+            v_max = self._view_v_max if self._view_v_max is not None else v_max
+
+        # Safety clamp: ensure ranges are never zero after viewport override
+        if t_max <= t_min:
+            mid = (t_min + t_max) / 2
+            t_min = mid - 1.0
+            t_max = mid + 1.0
+        if v_max <= v_min:
+            mid = (v_min + v_max) / 2
+            v_min = mid - 0.1
+            v_max = mid + 0.1
 
         # Store geometry for coordinate mapping
         self._plot_geom = (plot_x, plot_y, plot_w, plot_h)
@@ -645,6 +655,12 @@ class ChartWidget(Gtk.DrawingArea):
         t_half = (t_max - t_min) / 2 * factor
         v_half = (v_max - v_min) / 2 * factor
 
+        # Prevent degenerate zoom from collapsing the viewport
+        if t_half < 1e-6:
+            t_half = 1.0
+        if v_half < 1e-9:
+            v_half = 0.1
+
         self._push_zoom()
         self._view_t_min = t_center - t_half
         self._view_t_max = t_center + t_half
@@ -708,16 +724,18 @@ class ChartWidget(Gtk.DrawingArea):
             self._view_t_max = t_max
             self._view_v_min = v_min
             self._view_v_max = v_max
-        self._view_t_min = (self._view_t_min or t_min) + dt
-        self._view_t_max = (self._view_t_max or t_max) + dt
-        self._view_v_min = (self._view_v_min or v_min) + dv
-        self._view_v_max = (self._view_v_max or v_max) + dv
+        self._view_t_min = (self._view_t_min if self._view_t_min is not None else t_min) + dt
+        self._view_t_max = (self._view_t_max if self._view_t_max is not None else t_max) + dt
+        self._view_v_min = (self._view_v_min if self._view_v_min is not None else v_min) + dv
+        self._view_v_max = (self._view_v_max if self._view_v_max is not None else v_max) + dv
         self.queue_draw()
 
     def _pan_to_start(self) -> None:
         """Pan so the viewport starts at the first data point."""
         t_min, t_max, _, _ = self._data_range
-        span = (self._view_t_max or t_max) - (self._view_t_min or t_min)
+        span = (self._view_t_max if self._view_t_max is not None else t_max) - (
+            self._view_t_min if self._view_t_min is not None else t_min
+        )
         self._view_t_min = 0
         self._view_t_max = span
         self.queue_draw()
@@ -729,7 +747,9 @@ class ChartWidget(Gtk.DrawingArea):
         t0 = self._records[0].timestamp
         end = (self._records[-1].timestamp - t0).total_seconds()
         t_min, t_max, _, _ = self._data_range
-        span = (self._view_t_max or t_max) - (self._view_t_min or t_min)
+        span = (self._view_t_max if self._view_t_max is not None else t_max) - (
+            self._view_t_min if self._view_t_min is not None else t_min
+        )
         self._view_t_min = end - span
         self._view_t_max = end
         self.queue_draw()
@@ -739,10 +759,10 @@ class ChartWidget(Gtk.DrawingArea):
         t_min, t_max, v_min, v_max = self._data_range
         self._zoom_stack.append(
             (
-                self._view_t_min or t_min,
-                self._view_t_max or t_max,
-                self._view_v_min or v_min,
-                self._view_v_max or v_max,
+                self._view_t_min if self._view_t_min is not None else t_min,
+                self._view_t_max if self._view_t_max is not None else t_max,
+                self._view_v_min if self._view_v_min is not None else v_min,
+                self._view_v_max if self._view_v_max is not None else v_max,
             )
         )
 
