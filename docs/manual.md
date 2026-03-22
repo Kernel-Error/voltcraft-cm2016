@@ -100,7 +100,27 @@ sudo pacman -S python-gobject gtk4 libadwaita
 
 ## 3. Installation
 
-### Step 1: Create a Virtual Environment
+### Option A: Pre-built Packages
+
+Download from [GitHub Releases](https://github.com/Kernel-Error/voltcraft-cm2016/releases):
+
+```bash
+# Debian / Ubuntu / Mint
+sudo dpkg -i voltcraft-cm2016_0.1.0_all.deb
+
+# Fedora / RHEL
+sudo dnf install voltcraft-cm2016-0.1.0-1.noarch.rpm
+
+# openSUSE
+sudo zypper install voltcraft-cm2016-0.1.0-1.noarch.rpm
+```
+
+After installation, launch with `cm2016` from the terminal or from the
+application menu.
+
+### Option B: From Source
+
+#### Step 1: Create a Virtual Environment
 
 Because the application uses PyGObject (GTK bindings), the virtual environment
 must have access to system-installed packages:

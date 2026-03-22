@@ -57,6 +57,26 @@ GTK 4 / libadwaita desktop application.
 
 ## Installation
 
+### Pre-built packages
+
+Download from [GitHub Releases](https://github.com/Kernel-Error/voltcraft-cm2016/releases):
+
+- **Debian/Ubuntu/Mint:** `voltcraft-cm2016_0.1.0_all.deb`
+- **Fedora/openSUSE/RHEL:** `voltcraft-cm2016-0.1.0-1.noarch.rpm`
+
+```bash
+# Debian/Ubuntu/Mint
+sudo dpkg -i voltcraft-cm2016_0.1.0_all.deb
+
+# Fedora/RHEL
+sudo dnf install voltcraft-cm2016-0.1.0-1.noarch.rpm
+
+# openSUSE
+sudo zypper install voltcraft-cm2016-0.1.0-1.noarch.rpm
+```
+
+### From source
+
 ```bash
 git clone https://github.com/Kernel-Error/voltcraft-cm2016.git
 cd voltcraft-cm2016
