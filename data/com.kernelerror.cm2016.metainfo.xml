@@ -80,6 +80,17 @@
   </keywords>
 
   <releases>
+    <release version="0.1.1" date="2026-03-22">
+      <description>
+        <p>Bug fix release addressing 4 high-priority issues:</p>
+        <ul>
+          <li>Fix thread-safety in session data store</li>
+          <li>Fix chart zoom breaking when viewport boundary is at zero</li>
+          <li>Fix division by zero crash with single data point or degenerate zoom</li>
+          <li>Fix Excel export losing sheet name due to GTK callback argument issue</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.0" date="2026-03-21">
       <description>
         <p>Initial release with full feature parity to the Windows CM2016 Logger V2.10.</p>
