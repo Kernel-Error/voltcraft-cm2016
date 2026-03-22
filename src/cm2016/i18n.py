@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import gettext
 import locale
+import logging
 from pathlib import Path
 
 # Domain name for gettext
@@ -35,7 +36,12 @@ def setup_i18n() -> None:
     """
     global _translation
 
-    locale.setlocale(locale.LC_ALL, "")
+    try:
+        locale.setlocale(locale.LC_ALL, "")
+    except locale.Error:
+        logging.getLogger(__name__).warning(
+            "System locale is not installed; falling back to English."
+        )
 
     locale_dir = str(_LOCALE_DIR) if _LOCALE_DIR.is_dir() else None
 

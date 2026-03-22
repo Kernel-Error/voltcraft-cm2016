@@ -87,7 +87,7 @@ class MainWindow(Adw.ApplicationWindow):
         # Start/Stop toggle
         self._toggle_btn = Gtk.ToggleButton(label=_("Start Logging"))
         self._toggle_btn.add_css_class("suggested-action")
-        self._toggle_btn.connect("toggled", self._on_toggle_logging)
+        self._toggle_handler_id = self._toggle_btn.connect("toggled", self._on_toggle_logging)
         header.pack_start(self._toggle_btn)
 
         # Export menu (CSV / Excel)
@@ -311,15 +311,19 @@ class MainWindow(Adw.ApplicationWindow):
 
     def _handle_connection_lost(self) -> bool:
         """Handle connection loss in the GTK main loop."""
-        if self._recording:
-            self._recording = False
-            self._toggle_btn.set_active(False)
-            self._toggle_btn.set_label(_("Start Logging"))
-            self._toggle_btn.remove_css_class("destructive-action")
-            self._toggle_btn.add_css_class("suggested-action")
-            self._sidebar.set_recording(False)
-            self._show_toast(_("Recording stopped: CM2016 switched off or disconnected"))
-            logger.info("Connection lost")
+        if not self._recording:
+            return False
+
+        # Block the toggle signal to prevent re-entrant _stop_logging call
+        self._toggle_btn.handler_block(self._toggle_handler_id)
+        try:
+            self._stop_logging()
+        finally:
+            self._toggle_btn.handler_unblock(self._toggle_handler_id)
+
+        self._status_label.set_text(_("Disconnected — CM2016 switched off or unplugged"))
+        self._show_toast(_("Recording stopped: CM2016 switched off or disconnected"))
+        logger.info("Connection lost")
 
         return False
 

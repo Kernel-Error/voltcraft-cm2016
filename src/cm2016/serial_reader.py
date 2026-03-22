@@ -33,8 +33,9 @@ from cm2016.protocol import (
 
 logger = logging.getLogger(__name__)
 
-# Default timeout before declaring the connection lost (seconds).
-DISCONNECT_TIMEOUT = 2.0
+# Disconnect timeout (seconds). Must exceed the ~2 s frame interval by a
+# comfortable margin to avoid false disconnects from USB/OS jitter.
+DISCONNECT_TIMEOUT = 5.0
 
 # Serial port settings for the CM2016.
 BAUD_RATE = 19200

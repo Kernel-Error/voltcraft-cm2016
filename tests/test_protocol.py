@@ -315,9 +315,17 @@ class TestSlotStatus:
         slot = parse_slot(_build_slot(active=0, status=0x02), slot_index=0)
         assert slot.status == SlotStatus.READY
 
-    def test_trickle_active_0x07(self) -> None:
-        slot = parse_slot(_build_slot(active=1, status=0x07, step=1), slot_index=0)
+    def test_trickle_active_step_zero_0x07(self) -> None:
+        slot = parse_slot(_build_slot(active=1, status=0x07, step=0), slot_index=0)
         assert slot.status == SlotStatus.TRICKLE
+
+    def test_charging_wins_over_status_0x07(self) -> None:
+        slot = parse_slot(_build_slot(active=1, status=0x07, step=1), slot_index=0)
+        assert slot.status == SlotStatus.CHARGING
+
+    def test_discharging_wins_over_status_0x07(self) -> None:
+        slot = parse_slot(_build_slot(active=1, status=0x07, step=2), slot_index=0)
+        assert slot.status == SlotStatus.DISCHARGING
 
     def test_charging_odd_step(self) -> None:
         for step in (1, 3, 5, 7):
@@ -381,7 +389,7 @@ class TestSampleFrame:
         s = frame.slots[0]
         assert s.active is True
         assert s.program == SlotProgram.CHARGE
-        assert s.status == SlotStatus.TRICKLE  # active + 0x07
+        assert s.status == SlotStatus.CHARGING  # step=1 (odd) takes priority
         assert s.voltage == pytest.approx(1.32)
         assert s.current == pytest.approx(0.5)
         assert s.charge_capacity == pytest.approx(750.0)
@@ -392,7 +400,7 @@ class TestSampleFrame:
         s = frame.slots[1]
         assert s.active is True
         assert s.program == SlotProgram.DISCHARGE
-        assert s.status == SlotStatus.TRICKLE  # active + 0x07
+        assert s.status == SlotStatus.DISCHARGING  # step=2 (even) takes priority
         assert s.voltage == pytest.approx(1.1)
         assert s.current == pytest.approx(0.2)
         assert s.discharge_capacity == pytest.approx(200.0)

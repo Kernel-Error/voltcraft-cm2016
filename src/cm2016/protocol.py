@@ -141,14 +141,15 @@ class SlotData:
             if self.status_byte in (0x07, 0x02):
                 return SlotStatus.READY
             return SlotStatus.IDLE
-        # Active
-        if self.status_byte == 0x07:
-            return SlotStatus.TRICKLE
-        if self.step == 0:
-            return SlotStatus.IDLE
+        # Active — step takes priority over status byte
         if self.step % 2 == 1:  # Odd steps = charging
             return SlotStatus.CHARGING
-        return SlotStatus.DISCHARGING  # Even steps = discharging
+        if self.step != 0:  # Even non-zero steps = discharging
+            return SlotStatus.DISCHARGING
+        # step == 0: no active charge/discharge step
+        if self.status_byte == 0x07:
+            return SlotStatus.TRICKLE
+        return SlotStatus.IDLE
 
     @property
     def status_label(self) -> str:
