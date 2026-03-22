@@ -289,3 +289,14 @@ msgid ""
 msgstr ""
 "Open-Source Linux GUI fuer das Voltcraft Charge Manager CM 2016 "
 "Akkuladegeraet. Ersetzt die Windows-exklusive CM2016 Logger Software."
+
+# --- Print tooltips ---
+msgid "Print measurement report"
+msgstr "Messbericht drucken"
+
+msgid "Print is disabled during recording"
+msgstr "Drucken ist waehrend der Aufnahme deaktiviert"
+
+# --- Connection lost ---
+msgid "Disconnected — CM2016 switched off or unplugged"
+msgstr "Verbindung getrennt — CM2016 ausgeschaltet oder abgezogen"

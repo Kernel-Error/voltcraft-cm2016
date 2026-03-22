@@ -290,3 +290,14 @@ msgstr ""
 "Interfaccia grafica Linux open-source per il caricabatterie Voltcraft "
 "Charge Manager CM 2016. Sostituisce il software CM2016 Logger disponibile "
 "solo per Windows."
+
+# --- Print tooltips ---
+msgid "Print measurement report"
+msgstr "Stampa rapporto di misurazione"
+
+msgid "Print is disabled during recording"
+msgstr "La stampa e disabilitata durante la registrazione"
+
+# --- Connection lost ---
+msgid "Disconnected — CM2016 switched off or unplugged"
+msgstr "Disconnesso — CM2016 spento o scollegato"

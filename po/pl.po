@@ -290,3 +290,14 @@ msgstr ""
 "Otwartoźródłowy interfejs graficzny Linux dla ładowarki akumulatorów "
 "Voltcraft Charge Manager CM 2016. Zastępuje oprogramowanie CM2016 Logger "
 "dostępne wyłącznie na Windows."
+
+# --- Print tooltips ---
+msgid "Print measurement report"
+msgstr "Drukuj raport pomiarowy"
+
+msgid "Print is disabled during recording"
+msgstr "Drukowanie jest wyłączone podczas nagrywania"
+
+# --- Connection lost ---
+msgid "Disconnected — CM2016 switched off or unplugged"
+msgstr "Rozłączono — CM2016 wyłączony lub odłączony"

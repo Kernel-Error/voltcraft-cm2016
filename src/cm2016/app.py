@@ -100,6 +100,7 @@ class MainWindow(Adw.ApplicationWindow):
 
         # Print button (disabled during recording)
         self._print_btn = Gtk.Button(label=_("Print"))
+        self._print_btn.set_tooltip_text(_("Print measurement report"))
         self._print_btn.connect("clicked", self._on_print)
         header.pack_start(self._print_btn)
 
@@ -241,6 +242,7 @@ class MainWindow(Adw.ApplicationWindow):
         self._toggle_btn.add_css_class("destructive-action")
         self._sidebar.set_recording(True)
         self._print_btn.set_sensitive(False)
+        self._print_btn.set_tooltip_text(_("Print is disabled during recording"))
 
         # Inhibit system sleep/suspend during recording
         app = self.get_application()
@@ -277,6 +279,7 @@ class MainWindow(Adw.ApplicationWindow):
         self._toggle_btn.add_css_class("suggested-action")
         self._sidebar.set_recording(False)
         self._print_btn.set_sensitive(True)
+        self._print_btn.set_tooltip_text(_("Print measurement report"))
         self._status_label.set_text(_("Logging stopped"))
         logger.info("Logging stopped")
 

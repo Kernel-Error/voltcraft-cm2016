@@ -290,3 +290,14 @@ msgstr ""
 "Interfaz grafica de codigo abierto para Linux del cargador de baterias "
 "Voltcraft Charge Manager CM 2016. Reemplaza el software CM2016 Logger "
 "exclusivo de Windows."
+
+# --- Print tooltips ---
+msgid "Print measurement report"
+msgstr "Imprimir informe de medicion"
+
+msgid "Print is disabled during recording"
+msgstr "La impresion esta desactivada durante la grabacion"
+
+# --- Connection lost ---
+msgid "Disconnected — CM2016 switched off or unplugged"
+msgstr "Desconectado — CM2016 apagado o desenchufado"
